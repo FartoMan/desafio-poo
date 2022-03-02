@@ -3,46 +3,32 @@ package br.com.dio.desafio;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Mentoria {
+public class Mentoria extends Conteudo {
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private LocalDate data;
 
-    private String titulo;
-    private String descricao;
-    private LocalDate cargaHoraria;
-
-
-
-    public String getTitulo() {
-        return titulo;
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public LocalDate getData() {
+        return data;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public LocalDate getCargaHoraria() {
-        return cargaHoraria;
-    }
-
-    public void setCargaHoraria(LocalDate cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
     @Override
     public String toString() {
         return "Mentoria{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
+                ", data=" + data +
                 '}';
     }
+
+
+
 }
