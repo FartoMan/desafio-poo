@@ -58,6 +58,15 @@ public class Dev {
     }
 
     @Override
+    public String toString() {
+        return "Dev{" +
+                "nome='" + nome + '\'' +
+                ", conteudoInscritos=" + conteudoInscritos +
+                ", conteudosConcluidos=" + conteudosConcluidos +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -69,4 +78,6 @@ public class Dev {
     public int hashCode() {
         return Objects.hash(nome, conteudoInscritos, conteudosConcluidos);
     }
+
+
 }

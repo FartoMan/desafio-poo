@@ -1,5 +1,8 @@
 package br.com.dio.desafio;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Curso extends Conteudo{
 
     private int cargaHoraria;
@@ -16,6 +19,7 @@ public class Curso extends Conteudo{
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+
 
     @Override
     public String toString() {
